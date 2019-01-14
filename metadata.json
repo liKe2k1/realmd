@@ -1,9 +1,8 @@
 {
   "name": "like2k1-realmd",
-  "version": "2.4.2",
+  "version": "2.4.1",
   "author": "Chadwick Banning",
   "summary": "Puppet module to install and configure Realmd",
-  "data_provider": "hiera",
   "license": "Apache-2.0",
   "source": "https://github.com/like2k1/realmd",
   "project_page": "https://github.com/like2k1/realmd",
@@ -14,6 +13,7 @@
       "version_requirement": ">=3.2.0 <5.0.0"
     }
   ],
+  "data_provider": "hiera",
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",
@@ -34,5 +34,8 @@
       "name": "puppet",
       "version_requirement": ">= 4.0.0 < 6.0.0"
     }
-  ]
+  ],
+  "pdk-version": "1.8.0",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.8.0-0-g0d9da00"
 }

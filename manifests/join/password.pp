@@ -5,10 +5,10 @@
 #
 class realmd::join::password {
 
-  $_domain             = $::realmd::domain
-  $_user               = $::realmd::domain_join_user
-  $_password           = $::realmd::domain_join_password
-  $_ou                 = $::realmd::ou
+  $_domain = $::realmd::domain
+  $_user = $::realmd::domain_join_user
+  $_password = $::realmd::domain_join_password
+  $_ou = $::realmd::ou
   $_extra_join_options = $::realmd::extra_join_options
 
   if $::realmd::computer_name != undef {
@@ -17,14 +17,22 @@ class realmd::join::password {
     $_computer_name = $::hostname[0,15]
   }
 
-  if $::operatingsystem == 'Ubuntu'  {
-      $_computer_name_arg  = $facts['os']['distro']['codename'] ? {
+  if $::operatingsystem == 'Ubuntu' {
+    $_computer_name_arg = $facts['os']['distro']['codename'] ? {
       'xenial'  => '',
       'bionic'  => '',
+      'cosmic'  => '',
+      'default' => ["--computer-name=${_computer_name}"],
+    }
+  } elsif $::operatingsystem == 'Debian' {
+    $_computer_name_arg = $facts['os']['distro']['codename'] ? {
+      'jessie'  => '',
+      'stretch' => '',
+      'buster'  => '',
       'default' => ["--computer-name=${_computer_name}"],
     }
   } else {
-      $_computer_name_arg = ["--computer-name=${_computer_name}"]
+    $_computer_name_arg = ["--computer-name=${_computer_name}"]
   }
 
   if $_ou != undef {
@@ -36,7 +44,7 @@ class realmd::join::password {
   $_args = strip(join(concat($_realm_args, $_computer_name_arg, $_extra_join_options), ' '))
 
   file { '/usr/libexec':
-    ensure  => 'directory',
+    ensure => 'directory',
   }
 
   file { '/usr/libexec/realm_join_with_password':
