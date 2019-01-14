@@ -1,13 +1,13 @@
 {
-  "name": "walkamongus-realmd",
-  "version": "2.4.0",
+  "name": "like2k1-realmd",
+  "version": "2.4.2",
   "author": "Chadwick Banning",
   "summary": "Puppet module to install and configure Realmd",
   "data_provider": "hiera",
   "license": "Apache-2.0",
-  "source": "https://github.com/walkamongus/realmd",
-  "project_page": "https://github.com/walkamongus/realmd",
-  "issues_url": "https://github.com/walkamongus/realmd/issues",
+  "source": "https://github.com/like2k1/realmd",
+  "project_page": "https://github.com/like2k1/realmd",
+  "issues_url": "https://github.com/like2k1/realmd/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",

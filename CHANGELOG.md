@@ -1,5 +1,13 @@
 # Change Log
 
+## [v2.4.2](https://github.com/like2k1/realmd/tree/v2.4.1) (2018-09-16)
+[Full Changelog](https://github.com/like2k1/realmd/compare/v2.4.0...v2.4.1)
+
+**Closed issues:**
+
+- Debian 9.0: Unknown Option --computer-name [\#43](https://github.com/walkamongus/realmd/issues/43)
+
+
 ## [v2.4.0](https://github.com/walkamongus/realmd/tree/v2.4.0) (2018-09-16)
 [Full Changelog](https://github.com/walkamongus/realmd/compare/v2.3.0...v2.4.0)
 
