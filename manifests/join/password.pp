@@ -27,8 +27,6 @@ class realmd::join::password {
   } elsif $::operatingsystem == 'Debian' {
     $_computer_name_arg = $facts['os']['distro']['codename'] ? {
       'jessie'  => '',
-      'stretch' => '',
-      'buster'  => '',
       'default' => ["--computer-name=${_computer_name}"],
     }
   } else {
