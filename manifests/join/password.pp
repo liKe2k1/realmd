@@ -21,12 +21,12 @@ class realmd::join::password {
     $_computer_name_arg = $facts['os']['distro']['codename'] ? {
       'xenial'  => '',
       'bionic'  => '',
-      'cosmic'  => '',
       'default' => ["--computer-name=${_computer_name}"],
     }
   } elsif $::operatingsystem == 'Debian' {
     $_computer_name_arg = $facts['os']['distro']['codename'] ? {
       'jessie'  => '',
+      'stretch' => "--computer-name=${_computer_name}",
       'default' => ["--computer-name=${_computer_name}"],
     }
   } else {

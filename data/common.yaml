@@ -1,4 +1,8 @@
 ---
+realmd::policykit_package_name: policykit-1
+realmd::policykit_package_ensure: present
+realmd::packagekit_package_name: packagekit
+realmd::packagekit_package_ensure: present
 realmd::realmd_package_name: realmd
 realmd::realmd_package_ensure: present
 realmd::realmd_config_file: /etc/realmd.conf

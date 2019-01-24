@@ -1,6 +1,6 @@
 {
   "name": "like2k1-realmd",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "author": "Chadwick Banning",
   "summary": "Puppet module to install and configure Realmd",
   "license": "Apache-2.0",

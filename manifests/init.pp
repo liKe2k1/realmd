@@ -11,6 +11,10 @@
 #   e.g. "Specify one or more upstream ntp servers as an array."
 #
 class realmd (
+  String $policykit_package_name,
+  String $policykit_package_ensure,
+  String $packagekit_package_name,
+  String $packagekit_package_ensure,
   String $realmd_package_name,
   String $realmd_package_ensure,
   Stdlib::Absolutepath $realmd_config_file,

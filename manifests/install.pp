@@ -4,6 +4,14 @@
 #
 class realmd::install {
 
+  package { $::realmd::policykit_package_name:
+    ensure => $::realmd::policykit_package_ensure,
+  }
+
+  package { $::realmd::packagekit_package_name:
+    ensure => $::realmd::packagekit_package_ensure,
+  }
+
   package { $::realmd::realmd_package_name:
     ensure => $::realmd::realmd_package_ensure,
   }
