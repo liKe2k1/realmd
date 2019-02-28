@@ -1,5 +1,14 @@
 # Change Log
 
+## [v2.4.6](https://github.com/like2k1/realmd/tree/v2.4.6) (2019-02-28)
+[Full Changelog](https://github.com/like2k1/realmd/compare/v2.4.0...v2.4.6)
+
+**Closed issues:**
+
+- Adding policykit-1 and packagekit dependency if necessary
+- Ubuntu 18.04 join password support added
+
+
 ## [v2.4.2](https://github.com/like2k1/realmd/tree/v2.4.1) (2018-09-16)
 [Full Changelog](https://github.com/like2k1/realmd/compare/v2.4.0...v2.4.1)
 
