@@ -14,17 +14,17 @@ class realmd::join::password {
   if $::realmd::computer_name != undef {
     $_computer_name = $::realmd::computer_name
   } else {
-    $_computer_name = $::hostname[0,15]
+    $_computer_name = $::hostname[0, 15]
   }
 
   if $::operatingsystem == 'Ubuntu' {
-    $_computer_name_arg = $facts['os']['distro']['codename'] ? {
+    $_computer_name_arg = $::lsbdistcodename ? {
       'xenial'  => '',
       'bionic'  => '',
       'default' => ["--computer-name=${_computer_name}"],
     }
   } elsif $::operatingsystem == 'Debian' {
-    $_computer_name_arg = $facts['os']['distro']['codename'] ? {
+    $_computer_name_arg = $::lsbdistcodename ? {
       'jessie'  => '',
       'stretch' => "--computer-name=${_computer_name}",
       'default' => ["--computer-name=${_computer_name}"],
